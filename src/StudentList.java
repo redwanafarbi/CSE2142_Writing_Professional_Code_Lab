@@ -18,7 +18,7 @@ public class StudentList {
                         System.out.println(student.trim());
                     }
                 } catch (Exception e) {
-
+                    System.out.println("Please provide correct file name and path");
                 }
                 System.out.println(Constants.DATA_LOADED);
             }
@@ -31,6 +31,7 @@ public class StudentList {
                     int randomIndexForStudentSelection = randomStudent.nextInt(student.length);
                     System.out.println(student[randomIndexForStudentSelection].trim());
                 } catch (Exception e) {
+                    System.out.println("Please provide correct file name and path");
                 }
                 System.out.println(Constants.DATA_LOADED);
             }
@@ -43,7 +44,7 @@ public class StudentList {
                     String formattedDate = dateFormat.format(new Date());
                     writeInFile(Constants.COMMA_WITH_A_SPACE + newStudent + Constants.LAST_UPDATE + formattedDate,Constants.FILE_NAME);
                 } catch (Exception e) {
-
+                    System.out.println("Please provide correct file name and path");
                 }
                 System.out.println(Constants.DATA_LOADED);
             }
@@ -60,7 +61,7 @@ public class StudentList {
                         }
                     }
                 } catch (Exception e) {
-
+                    System.out.println("Please provide correct file name and path");
                 }
                 System.out.println(Constants.DATA_LOADED);
             } else if (args[0].contains("c")) {
@@ -71,7 +72,7 @@ public class StudentList {
 
                     System.out.println(students.length + Constants.WORD_FOUND);
                 } catch (Exception e) {
-
+                    System.out.println("Please provide correct file name and path");
                 }
                 System.out.println(Constants.DATA_LOADED);
             }

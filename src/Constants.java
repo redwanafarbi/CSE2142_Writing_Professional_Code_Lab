@@ -17,5 +17,6 @@ public abstract class Constants {
     public static String INVALID_ARGUMENT= "Invalid number of arguments" ;
     public static String ERROR_READING= "Error reading file" ;
     public static String ERROR_WRITING= "Error writing file" ;
+    public static String PROVIDE_CORRECT_FILE_OR_PATH = "Please provide correct file name and path" ;
 
 }
