@@ -52,12 +52,11 @@ public class StudentList {
                 try {
                     String studentName = readFrom(Constants.FILE_NAME);
                     String students[] = studentName.split(Constants.COMMA);
-                    boolean done = false;
                     String searchedStudentName = args[0].substring(1);
-                    for (int index = 0; index < students.length && !done; index++) {
+                    for (int index = 0; index < students.length; index++) {
                         if (students[index].equals(searchedStudentName)) {
                             System.out.println(Constants.WE_FOUND);
-                            done = true;
+                            break ;
                         }
                     }
                 } catch (Exception e) {
