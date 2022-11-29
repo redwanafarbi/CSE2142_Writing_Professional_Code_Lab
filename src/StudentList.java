@@ -11,13 +11,17 @@ public class StudentList {
                 BufferedReader s = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("students.txt")));
-                String r = s.readLine(); String i[] = r.split(",");
-                for(String j : i) { System.out.println(j.trim()); }
-            } catch (Exception e){}
+                String r = s.readLine();
+                String i[] = r.split(",");
+                for(String j : i) {
+                    System.out.println(j.trim());
+                }
+            } catch (Exception e) {
+
+            }
             System.out.println("Data Loaded.");
         }
-        else if(args[0].equals("r"))
-        {
+        else if(args[0].equals("r")) {
             System.out.println("Loading data ...");
             try {
                 BufferedReader s = new BufferedReader(
@@ -41,13 +45,14 @@ public class StudentList {
                 String df = "dd/mm/yyyy-hh:mm:ss a";
                 DateFormat dateFormat = new SimpleDateFormat(df);
                 String fd= dateFormat.format(d);
-                s.write(", "+t+"\nList last updated on "+fd);
+                s.write(", "+ t +"\nList last updated on "+fd);
                 s.close();
-            } catch (Exception e){}
+            } catch (Exception e){
+
+            }
             System.out.println("Data Loaded.");
         }
-        else if(args[0].contains("?"))
-        {
+        else if(args[0].contains("?")) {
             System.out.println("Loading data ...");
             try {
                 BufferedReader s = new BufferedReader(
@@ -63,11 +68,12 @@ public class StudentList {
                         done=true;
                     }
                 }
-            } catch (Exception e){}
+            } catch (Exception e){
+
+            }
             System.out.println("Data Loaded.");
         }
-        else if(args[0].contains("c"))
-        {
+        else if(args[0].contains("c")) {
             System.out.println("Loading data ...");
             try {
                 BufferedReader s = new BufferedReader(
@@ -78,14 +84,20 @@ public class StudentList {
                 boolean in_word = false;
                 int count=0;
                 for(char c:a) {
-                    if(c ==' ')
-                    {
-                        if (!in_word) {	count++; in_word =true;	}
-                        else { in_word=false;}
+                    if(c ==' ') {
+                        if (!in_word) {
+                            count++;
+                            in_word =true;
+                        }
+                        else {
+                            in_word=false;
+                        }
                     }
                 }
                 System.out.println(count +" word(s) found ");
-            } catch (Exception e){}
+            } catch (Exception e){
+
+            }
             System.out.println("Data Loaded.");
         }
     }
