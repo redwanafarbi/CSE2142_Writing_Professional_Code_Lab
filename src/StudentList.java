@@ -67,20 +67,9 @@ public class StudentList {
                 System.out.println(Constants.LOADING_DATA);
                 try {
                     String studentName = readFrom(Constants.FILE_NAME);
-                    char students[] = studentName.toCharArray();
-                    boolean in_word = false;
-                    int count = 0;
-                    for (char student : students) {
-                        if (student == ' ') {
-                            if (!in_word) {
-                                count++;
-                                in_word = true;
-                            } else {
-                                in_word = false;
-                            }
-                        }
-                    }
-                    System.out.println(count + Constants.WORD_FOUND);
+                   String students[] = studentName.split(Constants.COMMA_WITH_A_SPACE_SIGN);
+
+                    System.out.println(students.length + Constants.WORD_FOUND);
                 } catch (Exception e) {
 
                 }

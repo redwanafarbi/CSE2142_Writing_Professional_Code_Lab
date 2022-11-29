@@ -1,5 +1,5 @@
 public abstract class Constants {
-    public static String FILE_NAME = "student.txt" ;
+    public static String FILE_NAME = "students.txt" ;
     public static String LOADING_DATA= "Loading data ..." ;
     public static String DATA_LOADED = "Data Loaded." ;
     public static String DATE_FORMAT= "dd/mm/yyyy-hh:mm:ss a" ;
@@ -11,6 +11,7 @@ public abstract class Constants {
     public static String PLUS = "+" ;
     public static String COMMA = "," ;
     public static String COMMA_WITH_A_SPACE = ", " ;
+    public static String COMMA_WITH_A_SPACE_SIGN = "[ ,]+" ;
     public static String QUESTION_MARK= "?" ;
     public static String CHAR_C = "c" ;
     public static String INVALID_ARGUMENT= "Invalid number of arguments" ;
