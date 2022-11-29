@@ -23,11 +23,11 @@ public class StudentList {
                 BufferedReader s = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("students.txt")));
-                String r = s.readLine(); System.out.println(r);
+                String r = s.readLine();
                 String i[] = r.split(",");
                 Random x = new Random();
-                int y = x.nextInt();
-                System.out.println(i[y]);
+                int y = x.nextInt(i.length);
+                System.out.println(i[y].trim());
             } catch (Exception e){}
             System.out.println("Data Loaded.");
         }
