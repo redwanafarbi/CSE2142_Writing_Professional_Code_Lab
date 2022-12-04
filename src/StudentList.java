@@ -9,6 +9,8 @@ public class StudentList {
             System.out.println(Constants.INVALID_ARGUMENT);
         }
         else {
+
+            //Printing all the students name
             if (args[0].equals(Constants.CHAR_A)) {
                 System.out.println(Constants.LOADING_DATA);
                 try {
@@ -22,6 +24,8 @@ public class StudentList {
                 }
                 System.out.println(Constants.DATA_LOADED);
             }
+
+            //Print random student name
             else if (args[0].equals(Constants.CHAR_R)) {
                 System.out.println(Constants.LOADING_DATA);
                 try {
@@ -35,6 +39,8 @@ public class StudentList {
                 }
                 System.out.println(Constants.DATA_LOADED);
             }
+
+            //Adding new student in the file
             else if (args[0].contains(Constants.PLUS)) {
                 System.out.println(Constants.LOADING_DATA);
                 try {
@@ -48,6 +54,8 @@ public class StudentList {
                 }
                 System.out.println(Constants.DATA_LOADED);
             }
+
+            //Check weather student name in the file or not
             else if (args[0].contains(Constants.QUESTION_MARK)) {
                 System.out.println(Constants.LOADING_DATA);
                 try {
@@ -64,7 +72,10 @@ public class StudentList {
                     System.out.println(Constants.PROVIDE_CORRECT_FILE_OR_PATH);
                 }
                 System.out.println(Constants.DATA_LOADED);
-            } else if (args[0].contains("c")) {
+            }
+
+            //Found how many words in the file
+            else if (args[0].contains("c")) {
                 System.out.println(Constants.LOADING_DATA);
                 try {
                     String studentName = readFrom(Constants.FILE_NAME);
@@ -79,6 +90,7 @@ public class StudentList {
         }
     }
 
+    //Read from the file
     public static String readFrom(String fileName){
         try {
             BufferedReader bufferedReader = new BufferedReader(
@@ -93,6 +105,7 @@ public class StudentList {
         return "";
     }
 
+    //Write in the file
     public static String writeInFile(String writingText ,String fileName) {
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(

@@ -11,7 +11,7 @@ public abstract class Constants {
     public static String PLUS = "+" ;
     public static String COMMA = "," ;
     public static String COMMA_WITH_A_SPACE = ", " ;
-    public static String COMMA_WITH_A_SPACE_SIGN = "[ ,]+" ;
+    public static String COMMA_WITH_A_SPACE_SIGN = "," ;
     public static String QUESTION_MARK= "?" ;
     public static String CHAR_C = "c" ;
     public static String INVALID_ARGUMENT= "Invalid number of arguments" ;
